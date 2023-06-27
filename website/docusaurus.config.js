@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
 	title: 'DexText',
-	tagline: 'Your Keys to real Privacy',
+	tagline: 'Connecting the World, One Wallet at a Time',
 	url: 'https://www.dextext.com',
 	baseUrl: '/',
 	onBrokenLinks: 'throw',
@@ -15,14 +15,9 @@ const config = {
 	favicon: 'img/favicon.ico',
 	trailingSlash: true,
 
-	// GitHub pages deployment config.
-	// If you aren't using GitHub pages, you don't need these.
 	organizationName: 'DexText', // Usually your GitHub org/user name.
-	projectName: 'Dex-Text/', // Usually your repo name.
+	projectName: 'DexText', // Usually your repo name.
 
-	// Even if you don't use internalization, you can use this field to set useful
-	// metadata like html lang. For example, if your site is Chinese, you may want
-	// to replace "en" with "zh-Hans".
 	i18n: {
 		defaultLocale: 'en',
 		locales: ['en'],
@@ -31,88 +26,81 @@ const config = {
 	presets: [
 		[
 			'classic',
-			/** @type {import('@docusaurus/preset-classic').Options} */
-			({
+			{
 				docs: {
 					sidebarPath: require.resolve('./sidebars.js'),
-					// Please change this to your repo.
-					// Remove this to remove the "edit this page" links.
-					// editUrl:
-					// 	'https://github.com/mailchain/monorepo/tree/main/apps/',
 					routeBasePath: '/', // changing from 'docs' removes the docs folder from path
 					remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), { sync: true }]],
 				},
 				theme: {
 					customCss: require.resolve('./src/css/custom.css'),
 				},
-			}),
+			},
 		],
 	],
 
-	themeConfig:
-		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-		({
-			navbar: {
-				title: 'Mailchain Documentation',
-				logo: {
-					alt: 'Mailchain Logo',
-					src: 'img/logo.svg',
+	themeConfig: {
+		navbar: {
+			title: 'DexText Documentation',
+			logo: {
+				alt: 'DexText Logo',
+				src: 'img/logo.svg',
+			},
+			items: [
+				{ to: 'welcome-to-dextext', label: 'Docs For Users', position: 'left' },
+				{ to: 'developer/', label: 'Developer Docs', position: 'left' },
+				{ to: 'user/guides', label: 'Getting Started Guides & Tutorials', position: 'left' },
+				{ to: 'user/faqs', label: 'FAQs', position: 'left' },
+				{ to: 'getting-help', label: 'Help & Support', position: 'left' },
+				{
+					href: 'https://dextext.com/',
+					label: 'DexText',
+					position: 'right',
 				},
-				items: [
-					{ to: 'welcome-to-mailchain', label: 'Docs For Users', position: 'left' },
-					{ to: 'developer/', label: 'Developer Docs', position: 'left' },
-					{ to: 'user/guides', label: 'Getting Started Guides & Tutorials', position: 'left' },
-					{ to: 'user/faqs', label: 'FAQs', position: 'left' },
-					{ to: 'getting-help', label: 'Help & Support', position: 'left' },
-					{
-						href: 'https://mailchain.com/',
-						label: 'Mailchain',
-						position: 'right',
-					},
-					{
-						href: 'https://github.com/mailchain',
-						label: 'GitHub',
-						position: 'right',
-					},
-				],
+				{
+					href: 'https://github.com/Dex-Text/DexText',
+					label: 'GitHub',
+					position: 'right',
+				},
+			],
+		},
+		footer: {
+			style: 'light',
+			links: [
+				{
+					title: 'Community',
+					items: [
+						{
+							label: 'Discord',
+							href: 'https://discord.gg/dextext',
+						},
+						{
+							label: 'Telegram',
+							href: 'https://t.me/dextexting',
+						},
+					],
+				},
+				{
+					title: 'More',
+					items: [
+						{
+							label: 'Blog',
+							to: 'https://www.dextext.com/news',
+						},
+						{
+							label: 'GitHub',
+							href: 'https://github.com/Dex-Text/DexText',
+						},
+					],
+				},
+			],
+			copyright: `Copyright © ${new Date().getFullYear()} DexText`,
+		},
+		prism: {
+			theme: lightCodeTheme,
+			darkTheme: darkCodeTheme,
 			},
-			footer: {
-				style: 'light',
-				links: [
-					{
-						title: 'Community',
-						items: [
-							{
-								label: 'Discord',
-								href: 'https://discord.gg/ZMnJNx4WkQ',
-							},
-							{
-								label: 'Twitter',
-								href: 'https://twitter.com/mailchain_xyz',
-							},
-						],
-					},
-					{
-						title: 'More',
-						items: [
-							{
-								label: 'Blog',
-								to: 'https://www.mailchain.com/news',
-							},
-							{
-								label: 'GitHub',
-								href: 'https://github.com/mailchain',
-							},
-						],
-					},
-				],
-				copyright: `Copyright © ${new Date().getFullYear()} Mailchain`,
-			},
-			prism: {
-				theme: lightCodeTheme,
-				darkTheme: darkCodeTheme,
-			},
-		}),
+	},
 
 	plugins: [
 		[
@@ -174,7 +162,7 @@ const config = {
 					// similarity calculation. In these cases, this value can be reduced to get more balanced results.
 					k1: 1.2,
 					// By default, we rank pages where the search term appears in the title higher than pages where
-					// the search term appears in just the text. This is done by "boosting" title matches with a
+					//					// the search term appears in just the text. This is done by "boosting" title matches with a
 					// higher value than content matches. The concrete boosting behavior can be controlled by changing
 					// the following settings.
 					titleBoost: 5,
