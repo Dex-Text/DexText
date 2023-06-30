@@ -1,6 +1,7 @@
 {
 	"name": "@apps/docs",
 	"version": "0.0.13",
+	"workspaces": ["Dextext", "website", "smart-contract", "react-app"],
 	"private": true,
 	"scripts": {
 		"docusaurus": "docusaurus",
