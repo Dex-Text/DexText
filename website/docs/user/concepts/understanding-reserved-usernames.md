@@ -7,38 +7,37 @@ image: 'img/thumbs/social-square-1.png'
 
 # Introduction
 
-Protecting Mailchain users is a priority for us. The decision to reserve usernames was taken to increase security and increase the chance in a fair way for community members to create an account with their preferred username. Mailchain usernames are non-transferable. They cannot be sold or traded so there is no benefit for someone to seize a collection of usernames for them to go unused.
+At DexText, user protection is a priority. To enhance security and fairness, we have established a system of reserved wallet addresses. Unlike usernames, wallet addresses are unique identifiers on the blockchain, non-transferable by nature. They cannot be sold or traded, eliminating any incentive for hoarding addresses.
 
-Mailchain reserved usernames for:
+DexText has reserved certain categories of addresses:
 
--   Names under 5 characters (see below for [how to request a name](#how-can-i-request-a-reserved-username))
--   Known web3 projects (see below for [how to request a name](#how-can-i-request-a-reserved-username))
--   Administrative and support keywords
+- Addresses associated with known web3 projects.
+- Addresses associated with administrative and support functions.
 
 :::caution
 
-Usernames in Mailchain are non-transferable. Once a username has been taken, it cannot be reused.
+Wallet addresses are inherently non-transferable. Once an address is linked to a blockchain wallet, it cannot be reused.
 
-DO NOT buy or accept a username from anyone. Once you create a Secret Recovery Phrase for an account, it cannot be changed. The original owner will always know the Secret Recovery Phrase associated with that Mailchain identity and can access its account data.
+DO NOT buy or accept an address from anyone. Always ensure you have sole access to the private key associated with the wallet. The original owner who has access to the private key can always access the associated DexText account.
 
 :::
 
-## How can I tell if a username is reserved?
+## How can I tell if a wallet address is reserved?
 
-1. Go to https://app.mailchain.com/register
-2. Type the username into the 'Username' field
-3. If the username is reserved, the field will turn red and display the text:
+1. Go to https://app.dextext.com/register
+2. Enter the wallet address into the 'Wallet Address' field.
+3. If the address is reserved, the field will turn red and display the text:
 
-    > This username is reserved, contact support@mailchain if you want to claim it.
+    > This wallet address is reserved, contact support@dextext.com if you want to claim it.
 
-4. Alternatively, if the username is taken, the text will read:
+4. Alternatively, if the address is already registered, the text will read:
 
-    > This username is taken. Try another.
+    > This wallet address is already registered. Try another.
 
-    Or, if the username is unavailable for security reasons (e.g. admin@) the text will read:
+    Or, if the address is unavailable for security reasons (e.g.@admin), the text will read:
 
-    > This username is unavailable. Try another.
+    > This wallet address is unavailable. Try another.
 
-## How can I request a reserved username?
+## How can I request to use a reserved wallet address?
 
-If you would like to claim a reserved username, please [raise a support request](/getting-help) with details of the name you would like to register. If you represent a web3 project please provide details or justification.
+If you wish to use a reserved wallet address, please contact support with details of the address you would like to register. If you represent a web3 project, please provide justification or relevant details.

@@ -6,39 +6,25 @@ image: 'img/thumbs/social-square-1.png'
 ---
 
 # Introduction
+DexText centers around your data privacy. The guiding principle behind DexText's design and architecture is that only you should be able to access your private data.
 
-Mailchain gives you complete ownership of your data. We’ve built Mailchain around the principle that only you should be able to view your private data.
+## End-to-End Encryption in Blockchain Context
+While end-to-end encryption is a common term in the realm of traditional digital communications, its meaning slightly shifts in the blockchain context due to the unique properties of blockchain and its cryptographic primitives. In traditional messaging systems, end-to-end encryption refers to a mechanism where only the communicating users can read the messages. In transit, the messages are coded to conceal the message content from service providers, hackers, and legal authorities.
 
-## End-to-End Encryption
+When it comes to blockchain systems like DexText, "end-to-end encryption" revolves around a similar principle - ensuring that only the intended recipient(s) can access the information - but the mechanism used is inherently different due to the public nature of blockchains. Here's how it works:
 
-All Mailchain messages are encrypted end-to-end by default. To achieve complete end-to-end encryption, your private keys are never revealed to the Mailchain protocol. Your Secret Recovery Phrase is used to create a series a private keys that each perform independent actions which allow you to privately, register addresses, authenticate, store and save messages.
+## Encryption in DexText
+All messages in DexText are encrypted using the recipient's public key. This means that once a message is encrypted, only the holder of the corresponding private key – the intended recipient – can decrypt and read the message.
 
-The Mailchain application encrypts your data in your browser before storing it with Mailchain, meaning only you can decrypt it. Mailchain cannot decrypt your data. This includes your Secret Recovery Phrase, messages, and registered addresses.
+The DexText application performs the encryption within your browser before the data is stored, meaning only you, as the intended recipient, can decrypt it. DexText itself doesn't have access to your private keys and therefore cannot decrypt your data, whether it's your messages or the blockchain addresses you use.
 
-## Logging in to Mailchain
-
-After you successfully authenticate with your username and password, a key that is known only to you, is used to encrypt your Secret Recovery Phrase. Your password is never sent to Mailchain in any form. This also means we have no way to recover your account if you lose your password or are unable to complete any other account recovery options.
-
-Please see [FAQs](/user/faqs/) for more information on account recovery.
-
-## Registering a Wallet Address
-
-Mailchain uses a messaging key in place of your wallet key to encrypt and decrypt messages for each address. Messaging keys are more secure for encryption and mean you don’t expose your wallet’s private key.
-
-When you register a wallet address with your Mailchain account, a new messaging key is generated. With your wallet, you sign a confirmation to indicate this key should be used for messaging. Signing this confirmation creates a proof that users can independently verify. The private messaging key is known only to you.
-
-Registered addresses are encrypted before being stored, and you only need to verify ownership of your wallet address once. Mailchain disconnects your wallet after your wallet has created the proof. Your wallet private key is never exposed.
+Registering a Blockchain Wallet Address
+When you register a blockchain wallet address with your DexText account, you're essentially providing the public part of your address, which is used by others to encrypt messages they send to you. This address registration doesn't expose your private keys, ensuring your wallet's security.
 
 ## Sending and Receiving Messages
+Each time a message is sent via DexText, the sender uses the recipient's public key to encrypt the message. This ensures that only the holder of the corresponding private key can decrypt and read the message.
 
-Each time a message is sent via Mailchain, a new encryption key is created to encrypt the message contents and its location. This encryption key is then encrypted uniquely for each address that is receiving the message. A new key is created for each recipient and for each new message.
+When a message is sent, it's encrypted and then stored on IPFS. An IPFS hash pointing to the encrypted message is stored on the blockchain, and the recipient can access this hash, retrieve the message from IPFS, and decrypt it using their private key.
 
-Only the intended recipient(s) can recover the key then decrypt the location and message contents. All information within or about your messages, for example, sender, subject or date, is encrypted. Mailchain cannot read your messages, the storage provider cannot read your messages, your internet service provider cannot read your messages.
-
-When a message is sent, the message is encrypted and stored on distributed storage. An encrypted "delivery request" holds information for the message recipient to be able to collect their encrypted message. Messages are held in an ephemeral transport layer until the message has been retrieved by all the recipients or until it expires.
-
-## Saving Messages
-
-The Mailchain app will continuously check for new messages. Once a new message has been found, it is saved in your private inbox. Before being stored, messages are re-encrypted with a key that is specific to your inbox.
-
-Your inbox is designed to be intuitive and can be filtered in a familiar way but, it is secured so that only you can see and understand the relationships between your addresses and content. All IDs, filters and metadata are hashed or encrypted with a key derived from your private messaging key. Mailchain’s database cannot identify any relationships even if multiple addresses received the same messages; all the IDs, filters and content look completely different.
+## Security Considerations
+Despite the public nature of blockchains, the encryption mechanism in DexText ensures that your message content remains confidential. Only the intended recipient, who has the corresponding private key, can decrypt and read the message. Neither DexText nor any third party that doesn't have access to the recipient's private key can decrypt and read the message.

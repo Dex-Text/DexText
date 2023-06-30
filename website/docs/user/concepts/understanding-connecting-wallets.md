@@ -6,32 +6,28 @@ image: 'img/thumbs/social-square-1.png'
 ---
 
 # Introduction
+DexText gives you the ability to facilitate secure, private conversations linked to any of your blockchain addresses through a unified inbox. By registering your blockchain address, you can start sending and receiving encrypted messages via that address.
 
-Mailchain gives you the ability to check for messages sent to any of your blockchain addresses through your unified inbox. Once you register your blockchain address, you can start sending and receiving messages via that address.
-
-Use cases include receiving notifications and communications based on your on-chain activities. You can also send messages from that address, and recipients can verify that the message originated from that address.
+Use cases include facilitating private, secure conversations based on your on-chain identities. You can send messages from a specific address, and recipients can verify that the message originated from that address.
 
 ## How it works
+Your DexText account uses your existing wallet key, which is used to encrypt and decrypt messages. When you register an existing blockchain wallet address, you prove that you own it by signing a message of confirmation.
 
-Your Mailchain account has an identity key, which is used to generate messaging keys. When you register an existing blockchain wallet address, you prove that you own it by signing a message of confirmation.
+This generates a verifiable proof without requiring a blockchain transaction or gas fee. Your private key stays within your wallet and never leaves your device.
 
-This generates a verifiable proof without requiring a blockchain transaction or gas fee. It can then be associated with a messaging key.
-
-When someone sends a message to your address, the application looks up your address at the registry lookup and receives a response containing the corresponding messaging key for your address.
+When someone sends a message to your address, the application retrieves the IPFS hash of the encrypted message corresponding to your address from the Ethereum network.
 
 ## Bob and Alice use case example
+Bob wants to send a private message to Alice using the Ethereum address she used when she bought his last NFT. Alice has registered her Ethereum address in DexText by signing a message confirming ownership with her wallet. Bob sends a message to Alice's address. In the background, the DexText application encrypts Bob's message with Alice's public key, stores the encrypted message on IPFS, and records the IPFS hash on the Ethereum network.
 
-Bob wants to send a message to Alice to let her know he has a new art collection coming out. He only knows the ethereum address she used when she bought his last piece. Alice has registered her ethereum address in Mailchain by signing a message confirming ownership with her wallet. Bob sends a message to Alice's address. In the background, the Mailchain application looks up Alice's address and gets the corresponding messaging key. The message is encrypted and routed using the messaging key details.
+When Alice opens her inbox, she sees a message from Bob sent to her Ethereum address. Alice's wallet key is used by the application to decrypt the message body, but the private key information is never revealed.
 
-When Alice opens her inbox, she can see a message from Bob sent to her ethereum address. Alice's identity and message key details are used by the application to obtain and decrypt the message body, but the private key information is never revealed.
+Bob has no way of knowing whether Alice has linked any other address to her DexText unified inbox.
 
-Bob has no way of knowing Alice has linked any other address to her Mailchain unified inbox.
-
-When Bob receives a reply from Alice, he can check that the message key details are valid without knowing anything else about Alice's identity.
-Alice never had to enter any sensitive information to Mailchain, and she retains full control and ownership of her private keys for encryption and decryption.
+When Bob receives a reply from Alice, he can check that the message truly came from Alice's Ethereum address without knowing anything else about Alice's identity.
+Alice never had to enter any sensitive information into DexText, and she retains full control and ownership of her private keys for encryption and decryption.
 
 ## Further Information
-
 You can find more information on registering and removing wallets here:
 
 -   [How to register a wallet](/user/guides/getting-started/register-a-wallet)

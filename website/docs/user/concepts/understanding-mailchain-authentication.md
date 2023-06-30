@@ -7,41 +7,29 @@ image: 'img/thumbs/social-square-1.png'
 
 # Introduction
 
-Your Mailchain account is your new identity.
+Your DexText account is your new decentralized identity.
 
-You can use it for communicating with other Mailchain users or any blockchain addresses. Your identity is yours. Nobody, not even Mailchain has access to it. When you create a Mailchain account, two things happen:
+You can use it for communicating with other DexText users or any blockchain addresses. Your identity is yours. Nobody, not even DexText, has access to it. When you create a DexText account, two things happen:
 
-1. The Mailchain username that you choose is registered to your identity (which is linked to your [Secret Recovery Phrase](#your-secret-recovery-phrase)).
-1. You create a [safe space](#your-safe-space) to keep your messages, registered addresses, labels, and other application data.
+1. Your blockchain wallet address that you use to register is linked to your identity (which is safeguarded by your private key).
+2. You create a secure environment to keep your messages, registered addresses, and other application data.
 
-## Your Secret Recovery Phrase
+## Your Private Key
 
-Your _Secret Recovery Phrase_ is a collection of words that can be used to access your Mailchain identity.
+Your private key is a crucial element that gives you access to your blockchain wallet and subsequently your DexText identity.
 
-If you lose this, you may not be able to recover your account (see _"What happens if I forget or lose my Secret Recovery Phrase?"_ below). Store a copy of it somewhere safe (for example a password manager or written down and locked away).
+If you lose this, you may not be able to recover your account. It's crucial to store a copy of it somewhere safe (for example a hardware wallet, password manager, or written down and locked away).
 
-## Your Safe Space
+## Your Secure Environment
 
-Your data is encrypted with a key derived from your Secret Recovery Phrase. This key never leaves your browser unencrypted. Your password is used to encrypt this key, which is stored on Mailchain's server. When you choose a password, it should be a very strong password or passphrase. You should store a copy of it somewhere safe (for example a password manager or written down and locked away).
+Your data is encrypted with a key derived from your private key. This key never leaves your device unencrypted. Your encrypted messages are stored on the IPFS network and the hash is recorded on the blockchain. No sensitive data is stored on DexText servers.
 
 ## Important considerations
 
-### What happens if I forget or lose my password?
+### What happens if I lose my private key?
 
-If you forget or lose your password, you can recover your account using your Secret Recovery Phrase.
+If you lose your private key, you will lose access to your blockchain wallet and subsequently your DexText account. It is crucial to keep a secure and accessible copy of your private key.
 
-### What happens if I forget or lose my Secret Recovery Phrase?
+### What happens if I suspect my private key has been compromised?
 
-If you forget or lose your Secret Recovery Phrase, you can recover your account if you know your Mailchain username and password.
-
-### What happens if I forget my Secret Recovery Phrase and my password?
-
-If you forget your Secret Recovery Phrase and your password, your account will be inaccessible.
-
-### Will my data be accessible after I have recovered my account?
-
-When you log in to Mailchain with your Secret Recovery Phrase or username and password combination, your messages, registered wallets, settings, etc. will be accessible to you.
-
-### What should I do if I suspect my Secret Recovery Phrase or username and password combination have been compromised?
-
-Any user who suspects their Secret Recovery Phrase or username and password combination has been compromised should create a new account and migrate their blockchain addresses by re-registering them with the new account. Any new messages will now use the messaging keys for the new account.
+Any user who suspects their private key has been compromised should transfer their assets to a new blockchain wallet immediately. After creating a new blockchain wallet, they should register the new wallet address with their DexText account. Any new messages will now be linked to the new wallet address. Remember, your private key is crucial to your blockchain wallet and should be kept secure at all times.
